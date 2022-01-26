@@ -1,0 +1,283 @@
+@font-face {
+  font-family: Iosevka;
+  src: url(fonts/iosevka-custom-regular.ttf);
+  font-weight: normal;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-family:Iosevka;
+}
+
+body{
+    margin:0;
+    width:100%;
+}
+
+.zoom:hover {
+  transform: scale(1.5);
+}
+
+#head, #head h1, #head table {
+    background-color: #000000;
+    text-align: center;
+    color: #ffffff;
+}
+
+#head{
+    padding-bottom: 50px;
+    border-bottom: 6px #0f0 solid;
+}
+
+#head p{
+    max-width: 40%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#title{
+    padding-top:50px;
+    font-size: 2.75rem;
+}
+
+#categ{
+    margin-left:auto;
+    margin-right:auto;
+    width: 30%;
+    padding-bottom: 20px;
+    table-layout: fixed;
+}
+
+#head a:link {
+  text-decoration: none;
+    color: #555;
+}
+
+#head a:visited {
+    text-decoration: none;
+    font-weight: bold;
+    color:#555;
+}
+
+#head a:hover {
+    text-decoration: underline;
+    color: #aaa;
+}
+
+#head a:active {
+    text-decoration: underline;
+    color:#aaa;
+}
+
+.subcat {
+    width: 80%;
+    margin:50px auto;
+}
+
+div.subcat h2 {
+    font-size: 2rem;
+    margin: 0 0 20px 0;
+}
+
+.creat {
+    display: inline-flex;
+    vertical-align: middle;
+    width: 40%;
+    flex: 1; /* additionally, equal width */
+    padding: 30px;
+    
+}
+
+.creat img{
+    float: right;
+    display: initial;
+    width:200px;
+    border-radius: 5%;
+    transition: transform .1s;
+    margin-left: 10px;
+}
+
+.creat img:hover{
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5);
+}
+
+.creat p {
+    border-left: 6px #555 solid;
+    padding-left: 10px;
+}
+
+hr {
+    border: none;
+    border-top: 3px solid #333;
+    color: #333;
+    overflow: visible;
+    text-align: center;
+    height: 5px;
+    width:85%;
+}
+
+hr:after {
+    background: #555;
+    content: 'C';
+    color:#fff;
+    padding: 7px 10.5px;
+    border-radius: 50%;
+    position: relative;
+    top: -10px;
+}
+#test {
+    height: 500px
+}
+
+.subcat2 {
+    width: 70%;
+    margin:50px auto;
+}
+
+.subcat2 h2 {
+    font-size: 2rem;
+    margin: 0 0 20px 0;
+}
+
+ /*The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  padding: 20px 0;
+  position: absolute;
+  width: 6px;
+  background-color: black;
+  top: 0;
+  bottom: 0;
+  left: 31px;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  position: relative;
+  margin-bottom: 1em;
+  background-color: inherit;
+  width: 50%;
+  padding-left: 70px;
+  padding-right: 25px;
+  width: 100%;
+  max-width: 750px;
+}
+
+.container h3 {
+    margin-top: 10px 0;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  left: 22px;
+  background-color: #11cc22;
+  border: 4px solid black;
+  top: 15%;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) 
+.container::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}*/
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 10px 25px;
+  position: relative;
+  border: 2px solid black;
+  background-color: #ededed;
+}
+
+.container::before {
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+
+.container a:link, .container a:visited  {
+  font-style: italic;
+  text-decoration-style: dotted;
+  color: #555;
+}
+
+.container a:hover, .container a:active  {
+  font-style: italic;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  color: #aaa;
+}
+
+.container img {
+    width: 100%;
+}
+
+a[id="C"]:link, a[id="C"]:hover, a[id="C"]:active, a[id="C"]:visited {
+  font-style: italic;
+  font-weight: bolder;
+  color: #000;
+  text-decoration: none;
+}
+
+code {
+  border-radius:5%;
+  background-color: #dddddd;
+  font-size: larger;
+  font-weight: bold;
+  color: #2a2;
+}

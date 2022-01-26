@@ -1,0 +1,316 @@
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A C Programozási nyelv </title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="icon" href="images/favicon.png">
+  </head>
+  <body>
+    <div id="head">
+      <h1 id="title">A C Programozási nyelv</h1>
+      <table id="categ">
+	<tr>
+	  <i>
+	  <td><a href="#creators">Készítői</a></td>
+	  <td><a href="#history">Története</a></td>
+	  <td><a href="#keywords">Kulcsszavai</a></td>
+	  </i>
+	</tr>
+      </table>
+      <p><i>
+	  Egy egyszerű programozási nyelv, amit a 72-ben kezdtek el
+	  fejleszteni és a legnépszerűbb nyelvek egyikévé vált.
+	  </i></p>
+    </div>
+    <div class="subcat">
+      <h2 id="creators">Készítői</h2>
+      <div id="keszitok">
+	<div class="creat">
+	  <p>
+	    <i>Dennis MacAlistair Ritchie</i> a nyelv készítője, aki híres
+	    a C programozási nyelvről és az Unix operációs rendszerről amit
+	    az AT&T cégen belül a Bell Laboratói való dolgozása alatt
+	    készített a 70-es években.
+	  </p>
+	  <img src="images/Dennis_Ritchie.jpg" alt="Dennis Ritchie május 11-én
+						   a Japán Díj Alapítványnál">
+	</div>
+	<div class="creat">
+	  <p>
+	    <i>Brian Wilson Kernighan</i> késöbb meglátta a potenciált a
+	    nyelvben így írt segítette megírni a híres a C Programozási Nyelv
+	    című könyvet amiben sok újjítást hoztak be.
+	  </p>
+	<img src="images/Brian_kernighan.gif" alt="Brian Kernighan régi kép">
+	</div>
+      </div>
+    </div>
+    <hr>
+    <div class="subcat2">
+      <div id="test">
+	<h2 id="history">Története</h2>
+	<div class="timeline">
+	  <div class="container">
+	    <div class="content">
+	      <h3>Kezdete</h3>
+	      <p>A kezdete nagyon szoros az
+		<a href="https://en.wikipedia.org/wiki/Unix">Unix</a>
+		operációs rendszerrel, amit
+		eredetileg a <a href="https://en.wikipedia.org/wiki/PDP-7">
+		PDP-7</a> gépen írt meg Assembly nyelvben
+		Ritchie és Ken Thompson, sok dolog ihletve a kollégáitól.
+		Amikor kijött a
+		<a href="images/pdp11.jpg">PDP-11</a>
+		gép akkor akartak egy nyelvet
+		amivel könnyen működtetni tudják az Unix operációs rendszert
+		így Thompson először elkezdett írni egy
+		<a href="https://fortran-lang.org/">Fortran</a>
+		fordítót, de nem sokkal késöbb föl is adta. Ehelyett, ő
+		létrehozott egy levágott verziót a
+		<a href="https://en.wikipedia.org/wiki/BCPL">BCPL</a>
+		rendszer programozási nyelvből, annyi változással hogy nem
+		volt rendes leírása a nyelvnek és csökkentette a szavakat
+		a szintakszisban. Létre hozva így egy nagyon hasonló nyelvet
+		ami a
+		<a
+		href="https://en.wikipedia.org/wiki/B_(programming_language)">
+		B</a> de szimplább, de a B nyelvel viszont
+		voltak gondok mint a nyelv lassú volt és nem tudta a nyelv
+		használni a PDP-11 gépnek a byte címzés új funkcióját</p>
+	      <img src="images/pdp7.jpeg">
+	      <p>
+		1972-ben ritchie elkezdte javítani a B nyelvet, legjobban
+		megjegyezhetően az adat tipusokat behozta a változóknak,
+		így létre jött <b>a C nyelv</b>. A C fordító és még pár
+		segédprogramok bekerültek az Unix 2. verziójába.
+	      </p>
+	      <p>
+		A 4. verzió Unixot, ami 1973 novemberén lett kiadva, az
+		egész
+		<a href="https://en.wikipedia.org/wiki/Unix">Unix</a>
+<a href="https://en.wikipedia.org/wiki/Kernel_(operating_system)"> kernel</a>
+		teljesen újra lett írva a C
+		nyelvben. Ebben az időben a nyelv szerzett pár erős
+		funkciókat mint a <code>struct</code> (strucktúra).
+	      </p>
+	      <p>
+		<a href="https://en.wikipedia.org/wiki/C_preprocessor">
+		Preprocesszorok</a>
+		<i>kb.</i>1973-ban lett bemutatva az
+		Alan Snyder sürgetésénél és még felismerve a fájl-befogadó
+		mechanizmus használhatóságát amit már láthattunk a BCPL és
+		PL/I nyelvekben. Eredeti veriója csak fájlt és szimpla
+		karaktersorozatot helyettesítőt
+		tudott befogadni: <code>#include</code> és
+		<code>#define</code> a paraméter nélküli makróknak. Késöbb
+		ezután ki lett egészítve legtöbbet Mike Lesk és utána
+		John Reiser által.
+	      </p>
+	      <p>
+		Az Unix volt az első operációs rendszer kernel ami nem
+	<!---->assembly nyelvben lett írva. Elötte lévő esetek mint a
+		<a href="https://en.wikipedia.org/wiki/Multics">
+		Multics</a> rendszer(ami
+		<a href="https://en.wikipedia.org/wiki/PL/I">
+		PL/I</a> nyelvben lett írva)
+		és <a href="https://en.wikipedia.org/wiki/Burroughs_MCP">
+		Master Control Program</a>(ami
+		<a href="https://en.wikipedia.org/wiki/ALGOL">
+		ALGOL</a> nyelben
+		lett írva)
+	      </p>
+	    </div>
+	  </div>
+	  <div class="container">
+	    <div class="content">
+	      <h3>K&R C</h3>
+	      <p>
+		1978-ban, Brian Kernighan és Dennis Ritchie kiadta az első
+		változatát a
+		<a id="C" href="images/Cprognyelv.jpg">
+		  <!-- talán hogy egymás melett két könyv legyen -->
+		A C Programozási Nyelv</a> könyvnek.
+		Ez a könyv, amit a C programozók úgy hívnak hogy <i>K&R</i>
+		<i>[K END R]</i>, sok évig szolgáltattot kötetlen formájú
+		leírást a nyelvnek. A könyvben leírt változatot
+		"<b>K&R C</b>"-nek szokták hívni, vagy az év amikor kiadták
+		1978, úgy is szoktak rá hivatkozni mint <i>C78</i>. A
+		második verziója a könyvnek tartalmazza az
+		<a href="https://en.wikipedia.org/wiki/ANSI_C">ANSI C</a>
+		alapokat, leírva lejjebb.
+	      </p>
+	      <p><i>K&R</i> behozott sok nyelv újjítást:</p>
+	      <ul>
+		<li>Alapértelmezett I/O (Be/Ki-menet) könyvtár</li>
+		<li><code>long int</code> adat tipus</li>
+		<li><code>unsigned int</code> adat tipus</li>
+		<li>Összetett értékadó operátorok <code>=op</code>
+		  formában (mint a <code>=-</code>) ami át lett változtatva
+		  <code>op=</code> (ami <code>-=</code>) formára hogy
+		  eltörölje a szemantikai kétértelműséget (például
+		  <code>i=-10</code> kódot úgy is lehet értelmezni
+		  mint <code>i =- 10</code> (i-t csökkentjük 10-el) vagy
+		  <code>i = -10</code> (i nek az értéke -10))</li>
+	      </ul>
+	      <p>
+		Az 1989-es ANSI alapértelmezések publikálása után, sok évig
+		a <b>K&R C</b> volt a legalacsonyabb közös névadó" amihez
+		a C programozók lekorlátozták magukat mikor teljes
+		hordozhatóság lett igérve, mert nagyon sok régi fordító még
+		használatban volt és mert gondosan írt <b>K&R C</b> kód
+		tud legális Alapértelmezett C is lenni.
+	      </p>
+	      <p>
+		A kezdet leges verziókban, csak funkciók amik mást dobnak
+		vissza mint egy <code>int</code> (szám) deklarálni kellet
+		a funkció meghatározást; funkciók elött nem lévő
+		deklarálással a fordító feltételezte hogy egy
+		<code>int</code> (számot) akarunk vissza adni mint adat
+		tipus.
+	      </p>
+	      <!-- talán ide egy kód példát ha belefér-->
+	      <p>
+		Mert a K&R funkciók deklarációi nem tartottak semmilyen
+		információt az argumentumokról, paraméterkről így nem volt
+		tipus ellenőrzés, habár egyes fordítók figyelmeztettek hogy
+		rossz bemenetet adtál meg egy funkciónak, vagy több fajta
+		bemenetet adtál meg több hívásokhoz egy külső funkciónak.
+		Külön eszközöket mint az Unixnak a
+	<a href="https://en.wikipedia.org/wiki/Lint_programming_tool">
+		lint</a> szolgáltatás
+		lett fejlesztve(más dolgok között) ami leellenőrizte
+		az összetételét a funkció használatát több forrás fájlon
+		keresztül.
+	      </p>
+	      <p>
+		A következő években a <b>K&R C</b> publikálása után,
+		több újjítás
+		is belekerült a nyelvbe, támogatva az AT&T(pontosabban
+		<a href="https://en.wikipedia.org/wiki/Portable_C_Compiler">
+		PCC</a>) és más kereskedők által. Ezeket beleértve:
+	      </p>
+	      <ul>
+		<li><code>void</code> funkciók <i>(azaz olyan funkciók amik
+		nem adnak vissza semmilyen értéket)</i></li>
+		<li>funkció érték vissza adásnál struktúra és únió
+		tipusokat is (nem mutatókat)</li>
+		<li>értékadás a <code>struct</code> adat tipusoknak</li>
+		<li><a href="https://en.wikipedia.org/wiki/Enumerated_type">
+		Enumeráló tipusok</a></li>
+	      </ul>
+	      <p>
+		A sok kiegészítés miatt és a kevés egyet értés az
+		alapértelmezett könyvtáron, együtt a nyelv hírességével és
+		még az Unix fordítók sem jól alkalmazták a K&R
+		meghatározásokat, így szükség volt alapértelmezésekre.
+	      </p>
+	    </div>
+	  </div>
+	  <div class="container">
+	    <div class="content">
+	      <h3>ANSI C és ISO C</h3>
+	      <p>
+		A késő 70es és 80as években, a C verziói alkalmazva lett
+		széles választéka a
+		<a href="images/IBM_Z15_mainframe.jpg">mainframe gépekre</a>,
+		<a href="https://en.wikipedia.org/wiki/Minicomputer">
+		  minigépekre</a>, az
+		<a href="IBM_PC.png">IBM PC</a> beleértve, és a
+		híreségge elkezdett növekedni jelentősen.
+	      </p>
+	      <p>
+		1983-ban, az <a href="https://www.ansi.org/">
+		Amerikai Nemzeti Alapértelmezési
+		Intézmény</a> alakított egy bizottságot, X3J11, arra hogy
+		létrehozzák az alapértelmezett leírést a C nyelvről. X3J11
+		az Unixnak a C alapértelmezése kivitelezésen alapult;
+		deviszont, a nem hordozható részét az Unix C könyvtáraknak
+		oda adták az <a href="https://www.ieee.org/">
+		IEEE</a> dolgozó csoport 1003-nak hogy az alapja
+		legyen az 1988-as
+		<a href="https://en.wikipedia.org/wiki/POSIX">
+		POSIX</a> alapértelmezéseknek.
+		1989-ben, a C alapértelmezések jóvá lett hagyva úgy hogy
+		ANSI X3.159-1989 "Programming Language C". Ez a verziója a
+		nyelvnek sokszor ANSI C, Alap C vagy ritkán C89 névként
+		van hivatkozva.
+	      </p>
+	      <p>
+		ANSI, mint a többi ésszerű alapértelmezésnek a teste, nem
+		fejleszti tovább a C alapértelmezéseket függetlenül, de
+		késlelteti a nemzetközi C standard-ra, amit a dolgozó csoport
+		<a href="https://www.iso.org/">
+		ISO/IEC JTC1/SC22</a>/WG14 tartja fennt. Nemzeti
+		adoptálása egy frissítésnek a nemzetközi standardnak
+		tipikusan 1 éven belül előfordul.
+	      </p>
+	      <p>
+		Célja a C alapértelmezésekek hogy körbefoglalja a <b>K&R C</b>
+-t,
+		beépítve a sok késöbb bemutatott nem eredeti újjításokat.
+		Az alapértelmezettség bizottsága beleértette több kiegészítő vonással mint
+		funkció prototipusok (C++-tól kölcsönkérve),
+		<code>void</code> mutatók, támogatás a nemzetközi
+		karakterkészlet és helyi nyelvek, és preprocesszor
+		fejlesztések. Habár a szintakszisa a paraméter deklaráció
+		bővítve lett a stílussal amit a C++ nyelvben használnak,
+		a K&R interfész az folytatólagosan engedélyezve lett,
+		már meglévő létező forráskód kompatibilitás érvvel.
+	      </p>
+	      <p>
+		C89 az támogatva van a mostani fordítók által, és a legtöbb
+		modern C kód az arra alapul. Akármilyen program ami csak az
+		Alap C-ben van írva hardverre alapuló feltételezések nélkül
+		helyesen fog futni akármilyen platformon megfelelő C
+		kivitelezéssel, a forrás limitjei között. Elővigyázat nélkül,
+		programok lehet csak egyes platformokra vagy egyes
+		fordítókkal lehet fordítani, például platformhoz kötött
+		könyvtárak, vagy fordítón alapuló meghatározások.
+	      </p>
+	      <p>
+		Az ANSI/ISO alapértelmezési folyamat, a C nyelv
+		meghatározásai több évig statikus volt. 1995-ben,
+		szabályzó kiegészítés 1 az 1990 C alapértelmezettséghez lett publikálva,
+		hogy kijavítsanak egy pár részletet és hogy adjanak nagyobb
+		kiegészített támogatást a nemzetközi karakterkészletre.
+	      </p>
+	    </div>
+	  </div>
+	  <div class="container">
+	    <div class="content">
+	      <h3>C99</h3>
+	    </div>
+	  </div>
+	  <div class="container">
+	    <div class="content">
+	      <h3>C11</h3>
+	    </div>
+	  </div>
+	  <div class="container">
+	    <div class="content">
+	      <h3>C17</h3>
+	      <p>
+		2018 júniusában lett publikálva, C17 jelenleg az alapja a
+		C programozási nyelvnek. Nem hozott be semmilyen újjítást
+		csak technikai javításokat, tisztázásokat a C11
+		hiányosságára. Az alapértelmezettség makró
+		<code>__STDC_VERSION__</code>
+		<code>201710L</code> ként lett meghatározva.
+	      </p>
+	    </div>
+	  </div>
+	  <div class="container">
+	    <div class="content">
+	      <h3>C2x</h3>
+	      <p>
+		C2x az egy nem hivatalos név a következő (C17 után)
+		jelentősebb C nyelv alapértelmezettség javítására.
+		Ez feltételezhetően 2023-ban lesz megszavazva és
+		emiatt lesz C23 a neve.
+	      </p>
+	    </div>
+	  </div>
+    </div>
+  </body>
+</html>
